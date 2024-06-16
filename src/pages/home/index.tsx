@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "semantic-ui-react";
+import { ColumnDisplay } from "./ColumnDisplay";
 
 enum DisplayType {
   Movies = "movies",
@@ -25,6 +26,13 @@ export const Home = () => {
           TV Shows
         </Button>
       </Button.Group>
+      <div style={{ marginTop: 20 }}>
+        {displayType === DisplayType.Movies ? (
+          <ColumnDisplay />
+        ) : (
+          <ColumnDisplay />
+        )}
+      </div>
     </div>
   );
 };
